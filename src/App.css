@@ -232,69 +232,80 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
-  margin-top: 0;
+  margin-top: bottom left;
   padding: 260px 0 100px 0;
   background-image: url('./assets/img/banner-bg.png');
-  background-position: top center;
+  background-position: top right;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner .tagline {
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: 100;
+  letter-spacing: 1.8px;
+  padding: 8px 11px;
+  background: linear-gradient(90.21deg, rgba(153, 170, 54, 0.5) -5.91%, rgba(189, 47, 170, 0.5) 111.58%);
+  border: 0px solid rgba(255, 255, 255, 0.1);
   font-size: 20px;
-  margin-bottom: 16px;
-  display: inline-block;
+  margin-bottom: 0px;
+  display: block;
+  position: inherit;
 }
 .banner h1 {
+  color: #7edc2c;
   font-size: 65px;
-  font-weight: 700;
+  font-weight: 200;
   letter-spacing: 0.8px;
-  line-height: 1;
-  margin-bottom: 20px;
-  display: block;
+  line-height: 1.25;
+  margin-bottom: 30px;
+  text-align: left;
 }
 .banner p {
-  color: #B8B8B8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
+  color: rgb(39, 178, 209);
+  font-size: 20px;
+  letter-spacing: 0.9px;
   line-height: 1.5em;
-  width: 96%;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  margin: 50;
+  padding-left: 0;
+  margin-left: 0;
 }
+
 .banner button {
-  color: #fff;
+  color: #a33838;
   font-weight: 700;
   font-size: 20px;
   margin-top: 60px;
   letter-spacing: 0.8px;
-  display: flex;
+  display: block;
   align-items: center;
 }
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
-  transition: 0.3s ease-in-out;
+  transition: 5.5s ease-out;
   line-height: 1;
 }
 .banner button:hover svg {
   margin-left: 25px;
 }
 .banner img {
-  animation: updown 3s linear infinite;
+  animation: fadeIn 20.5s ease-out;
 }
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+      transform: translateY(0);
+  }
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;

@@ -10,9 +10,9 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [delta, setDelta] = useState(100 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "Aspiring Software Engineer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(250);
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
@@ -57,16 +57,18 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Swetha and I am a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <h1>{`Hello! My name is Swetha and I am an`} <span className="txt-rotate" dataPeriod="2000" data-rotate='[ "Aspiring Software Engineer"]'><span className="wrap">{text}</span></span></h1>
+                  <p>My journey into the world of tech began in 2020 with curiosity and a drive to understand how software impacts our daily lives. I've dedicated myself to learning and mastering programming languages, software development methodologies, and collaborative projects. My portfolio showcases a range of projects that reflect my skills, from web applications designed to solve real-world problems to innovative software solutions that enhance user experience. Join me as I navigate the exciting path of technology, striving to make a significant impact in the digital world.</p>
+                  <a href={`${process.env.PUBLIC_URL}/Swetha_CV.pdf`} download="Swetha_CV.pdf">
+                  <button onClick={() => console.log('connect')}>Download My Resume Here<ArrowRightCircle size={25} /></button>
+                  </a>
               </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                <div className={isVisible ? "animate__animated animate__easeIn" : ""}>
                   <img src={headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>

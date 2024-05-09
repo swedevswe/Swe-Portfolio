@@ -20,7 +20,7 @@
     "react-on-screen": "^2.1.1",
     "react-router-dom": "^6.22.3",
     "react-router-hash-link": "^2.4.3",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -31,7 +31,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://github.com/swedevswe/Swe-Portfolio",
+  "homepage": "https://swedevswe.github.io/Swe-Portfolio",
   "eslintConfig": {
     "extends": [
       "react-app",
